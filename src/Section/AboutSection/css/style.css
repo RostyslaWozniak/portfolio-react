@@ -1,0 +1,22 @@
+@keyframes gearRotate {
+
+    100%{
+        rotate: 360deg;
+    }
+}
+@keyframes bouncing {
+
+    100%{
+        translate: 0 15px;
+    }
+}
+@keyframes changeLanguage {
+    0%,
+    55%{
+        translate: 0 0;
+    }
+    59%,
+    100%{
+        translate: 0 -50px;
+    }
+}

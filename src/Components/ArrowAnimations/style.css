@@ -1,0 +1,26 @@
+#arrow1-container{
+    transition: .3s ease-in-out;
+}
+#arrow1-container:hover{
+    scale: 1.05;
+}
+#arrow1-container rect,
+#arrow1-container path{
+    transition: .3s ease-in-out;
+    animation: 4s infinite drawArrow1;
+}
+
+@keyframes drawArrow1 {
+    0%{
+        width: 0;
+    }
+    50%{
+        fill: white;
+        width: 110%;
+    }
+    100%{
+        fill: transparent;
+        width: 110%;
+      
+    }
+}
