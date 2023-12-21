@@ -1,6 +1,6 @@
 import { useAppContext } from '../../../../Context/AppContext';
 
-const Navigation = () => {
+const BurgerNavigation = () => {
     const { isNavActive, setIsNavActive, setIsLogoActive } = useAppContext();
 const navArray = [
     {name: 'About', href: '#about'},
@@ -26,7 +26,7 @@ const navArray = [
     return ( 
         <nav 
             onClick={handleNavClick}
-            className="fixed top-[0] h-screen w-[min(400px,100%)] py-40 bg-secondary z-[10] duration-500 laptop:bg-opacity-0 laptop:p-5 laptop:right-[10%]"
+            className="fixed top-[0] h-screen w-[min(400px,100%)] py-40 bg-secondary z-[10] duration-500"
             style={{
                 left: isNavActive ? '0' : '-110%',
      
@@ -39,4 +39,4 @@ const navArray = [
      );
 };
  
-export default Navigation;
+export default BurgerNavigation;

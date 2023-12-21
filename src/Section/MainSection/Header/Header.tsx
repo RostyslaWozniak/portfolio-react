@@ -3,6 +3,7 @@ import ShowLogo from '../../../Components/Logo/Logo';
 import { useAppContext } from '../../../Context/AppContext';
 import HomeBackground from '../HomeBackground';
 import BurgerButton from './Navigation/BurgerButton';
+import HeaderNavigation from './Navigation/HeaderNavigation';
 
 
 const Header = () => {
@@ -50,6 +51,7 @@ const Header = () => {
       }}>
       <div className="w-sectionWidth mx-auto py-4 flex justify-between items-center text-[1.2rem] ">
         <ShowLogo/>
+        <HeaderNavigation/>
         <BurgerButton/>
       </div>
       {hasHeaderBackground && <HomeBackground/>}
