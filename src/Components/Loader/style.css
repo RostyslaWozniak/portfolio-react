@@ -7,7 +7,6 @@
     place-items: center;
     background-color: var(--secondary-color);
     z-index: 999;
-    
 }
 #loader-container svg text{
     translate: -10% 0;

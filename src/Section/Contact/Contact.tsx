@@ -21,11 +21,11 @@ const [isFormHovered, setIsFormHovered] = useState(false);
     className="bg-primary text-font flex flex-col justify-between items-center py-[150px] shadow-primary-shadow "
     style={{
       backgroundImage:`url(${pencil}), url(${message}), url(${lines}), url(${mail})`,
-      // backgroundPosition: `
-      //   top 20% left 20%, 
-      //   top 30 right 10%, 
-      //   bottom 10% right 10%, 
-      //   bottom 10% left 10`,
+      backgroundPosition: `
+        top 20% left 20%, 
+        top 30% right 10%, 
+        bottom 10% right 10%, 
+        bottom 10% left 10%`,
       // backgroundPosition: `
       //   top ${isFormHovered ? '25' : '20'}% left ${isFormHovered ? '25' : '20'}%, 
       //   top ${isFormHovered ? '32' : '30'}% right ${isFormHovered ? '12' : '10'}%, 

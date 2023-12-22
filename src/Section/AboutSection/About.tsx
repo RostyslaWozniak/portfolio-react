@@ -1,6 +1,5 @@
 import ShowLanguages from './Languages/ShowLanguages';
 import UseTechnologies from './TechnologyUse/UseTechnologies';
-import gear from '../../asets/images/background/about/gear.svg';
 import './css/style.css';
 
 const About = () => {
@@ -8,16 +7,10 @@ const About = () => {
     <section 
         id="about" 
         className="relative bg-primary bg-no-repeat text-font shadow-primary-shadow ">
-        <img 
-            src={gear} 
-            className="absolute hidden laptop:block" 
-            style={{
-                animation: '60s linear infinite gearRotate'
-            }}
-        />
         <div className="w-sectionWidth mx-auto flex flex-col gap-lg pt-[200px] ">
             <div className="flex flex-col laptop:flex-row gap-lg">
                 <div className="w-[min(600px,100%)] flex flex-col gap-md p-10 text-justify mx-auto border rounded-lg backdrop-blur-md scale-[.98] shadow-sm hover:shadow-lg duration-300 hover:scale-[1]">
+                    
                     <h1 className="text-[2rem] text-center z-[1]">ABOUT</h1>
                     <p className="z-[1]">Hi, welcome to my profile. As a passionate freelance Frontend JavaScript Developer, I bring expertise in creating dynamic and user-friendly interfaces using the powerful combination of React for the frontend, Node.js and Express for server-side logic, and MongoDB for seamless database integration.</p>
                         

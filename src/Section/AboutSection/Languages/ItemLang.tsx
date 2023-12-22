@@ -1,22 +1,23 @@
-import { primary, secondary, font, background } from '../../../utilities/colors';
+import { secondary, font, background } from '../../../utilities/colors';
 type ItemLangProps = {
     name: string;
     level: string;
     delay: number;
     active?: boolean;
+    top: number;
 }
 
 
-const ItemLang = ({ name, level, delay, active = false } : ItemLangProps) => {
+const ItemLang = ({ name, level, delay, active = false, top } : ItemLangProps) => {
 
 
     return ( 
         <div 
-
-            className="w-full h-full flex justify-between px-2 py-[8px] rounded duration-300"
+            className="absolute w-full  flex justify-between px-4 py-3 rounded duration-300"
             style={{
+                top,
                 backgroundColor: active ? secondary : background,
-                color: active ? primary : font,
+                color: active ? background : font,
                 animation: `5s ${delay}s linear infinite alternate changeLanguage`,
             }}
             >

@@ -1,9 +1,3 @@
-@keyframes gearRotate {
-
-    100%{
-        rotate: 360deg;
-    }
-}
 @keyframes bouncing {
 
     100%{
@@ -17,6 +11,6 @@
     }
     59%,
     100%{
-        translate: 0 -50px;
+        translate: 0 -60px;
     }
 }

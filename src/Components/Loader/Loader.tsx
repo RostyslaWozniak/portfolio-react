@@ -18,6 +18,7 @@ const Loader = () => {
     const time = delayLoading / 1000 - 1;
     return ( 
         <div id="loader-container" 
+        
         style={{
             display: isLoaderVisible ? 'grid' : 'none', 
             backgroundImage: `url(${loaderBG})`,
