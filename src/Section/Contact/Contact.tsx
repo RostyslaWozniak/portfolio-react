@@ -4,23 +4,23 @@ import message from '../../asets/images/background/contact/message.svg';
 import mail from '../../asets/images/background/contact/mail.svg';
 import lines from '../../asets/images/background/contact/lines.svg';
 import pencil from '../../asets/images/background/contact/pencil.svg';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import './css/style.css';
 
 
 const Contact = () => {
 const [isFormHovered, setIsFormHovered] = useState(false);
-const [isTabletSize, setIsTabletSize] = useState(false);
+// const [isTabletSize, setIsTabletSize] = useState(false);
 
-useEffect(() => {
-  if(window.innerWidth > 650) setIsTabletSize(true);
-  if(window.innerWidth <= 650) setIsTabletSize(false);
-}, [setIsTabletSize]);
+// useEffect(() => {
+//   if(window.innerWidth > 650) setIsTabletSize(true);
+//   if(window.innerWidth <= 650) setIsTabletSize(false);
+// }, [setIsTabletSize]);
   return(
     <section id="contact"
     className="bg-primary text-font flex flex-col justify-between items-center py-[150px] shadow-primary-shadow "
     style={{
-      backgroundImage: isTabletSize ? `url(${pencil}), url(${message}), url(${lines}), url(${mail})` : '',
+      backgroundImage:`url(${pencil}), url(${message}), url(${lines}), url(${mail})`,
       backgroundPosition: `
         top ${isFormHovered ? '25' : '20'}% left ${isFormHovered ? '25' : '20'}%, 
         top ${isFormHovered ? '32' : '30'}% right ${isFormHovered ? '12' : '10'}%, 
