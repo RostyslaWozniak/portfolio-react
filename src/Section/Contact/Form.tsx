@@ -1,11 +1,14 @@
 import FormButton from './FormButton';
+import message from '../../asets/images/background/contact/message.svg';
+import mail from '../../asets/images/background/contact/mail.svg';
 import './css/style.css';
 
 type FormProps = {
+    isFormHovered: boolean;
     setIsFormHovered: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const Form = ({ setIsFormHovered } : FormProps) => {
+const Form = ({ isFormHovered, setIsFormHovered } : FormProps) => {
     return ( 
         <form 
             action="https://formsubmit.co/rostik19wozniak@gmail.com" 
@@ -55,6 +58,18 @@ const Form = ({ setIsFormHovered } : FormProps) => {
             <input type="hidden" name="_captcha" value="false"/>
 
             <FormButton/>
+            <img className="absolute top-[-60%] right-[-40%] duration-500"
+                style={{
+                    top: isFormHovered ? '-60%' : '-70%',
+                    right: isFormHovered ? '-40%' : '-50%',
+                }}
+                src={message}/>
+            <img className="absolute top-[-60%] right-[-40%] z-[-1] duration-500" 
+                style={{
+                    top: isFormHovered ? '50%' : '60%',
+                    left: isFormHovered ? '-50%' : '-60%',
+                }}
+                src={mail}/>
         </form>
      );
 };

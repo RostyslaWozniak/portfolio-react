@@ -1,9 +1,9 @@
 import Form from './Form';
 import Icons from './Icons';
-import message from '/src/asets/images/background/contact/message.svg';
-import mail from '/src/asets/images/background/contact/mail.svg';
-import lines from '/src/asets/images/background/contact/lines.svg';
-import pencil from '/src/asets/images/background/contact/pencil.svg';
+// import message from '/src/asets/images/background/contact/message.svg';
+// import mail from '/src/asets/images/background/contact/mail.svg';
+// import lines from '/src/asets/images/background/contact/lines.svg';
+// import pencil from '/src/asets/images/background/contact/pencil.svg';
 import { useState } from 'react';
 import './css/style.css';
 
@@ -20,8 +20,7 @@ const [isFormHovered, setIsFormHovered] = useState(false);
     <section id="contact"
     className="bg-primary text-font flex flex-col justify-between items-center py-[150px] shadow-primary-shadow "
     style={{
-      cursor: isFormHovered ? 'pointer' : 'default',
-      backgroundImage:`url('${pencil}'), url('${message}'), url('${lines}'), url('${mail}')`,
+      // backgroundImage:`url(${pencil}), url(${message}), url(${lines}), url(${mail})`,
       // backgroundPosition: `
       //   top 20% left 20%, 
       //   top 30% right 10%, 
@@ -38,7 +37,7 @@ const [isFormHovered, setIsFormHovered] = useState(false);
     >
         <h1 className="text-[2rem] text-center z-[1]">CONTACT</h1>
         <Icons/>
-        <Form setIsFormHovered={setIsFormHovered}/>  
+        <Form setIsFormHovered={setIsFormHovered} isFormHovered={isFormHovered}/>  
 
     </section>
   );
