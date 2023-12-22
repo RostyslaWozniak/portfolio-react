@@ -1,9 +1,9 @@
 import Form from './Form';
 import Icons from './Icons';
-import message from '../../asets/images/background/contact/message.svg';
-import mail from '../../asets/images/background/contact/mail.svg';
-import lines from '../../asets/images/background/contact/lines.svg';
-import pencil from '../../asets/images/background/contact/pencil.svg';
+import message from '/src/asets/images/background/contact/message.svg';
+import mail from '/src/asets/images/background/contact/mail.svg';
+import lines from '/src/asets/images/background/contact/lines.svg';
+import pencil from '/src/asets/images/background/contact/pencil.svg';
 import { useState } from 'react';
 import './css/style.css';
 
