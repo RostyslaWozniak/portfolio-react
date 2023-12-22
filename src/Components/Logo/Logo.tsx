@@ -22,7 +22,7 @@ function showLogo(){
   const activeLogo = isLogoActive && 'active';
     return(
       <div 
-        className={`logo-container ${activeLogo} tablet:scale-110`}
+        className={`logo-container ${activeLogo} tablet:scale-110 z-[10]`}
         onClick={handleClickLogo}
        >
         <div className="R">R</div>

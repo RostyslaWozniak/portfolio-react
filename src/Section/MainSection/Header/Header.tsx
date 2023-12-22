@@ -1,9 +1,8 @@
 import { useEffect } from 'react';
 import ShowLogo from '../../../Components/Logo/Logo';
 import { useAppContext } from '../../../Context/AppContext';
-import HomeBackground from '../HomeBackground';
 import BurgerButton from './Navigation/BurgerButton';
-import HeaderNavigation from './Navigation/HeaderNavigation';
+import Navigation from './Navigation/Navigation';
 
 
 const Header = () => {
@@ -18,11 +17,11 @@ const Header = () => {
 
   useEffect(() => {
     let screenArray : number[] = [];
-
+    const tabletWidth = 650;
     window.addEventListener('scroll', () => {
       
-      if(window.scrollY < window.innerHeight - 100){
-        if(window.innerWidth > 650) setIsLogoActive(true);
+      if(window.scrollY < window.innerHeight){
+        if(window.innerWidth > tabletWidth) setIsLogoActive(true);
         setIsHeaderActive(true);
         setHasHeaderBackground(false);
       } else{
@@ -44,17 +43,16 @@ const Header = () => {
 
   return (
     <header 
-      className="fixed w-screen z-[30] overflow-hidden duration-200" 
+      className="fixed w-screen z-[30] duration-200" 
       style={{
         top: isHeaderActive ? '0' : '-100px', 
-        backdropFilter: isHeaderActive ? 'brightness(100%)' : 'brightness(100%)'
+        backdropFilter: hasHeaderBackground ? 'brightness(40%)' : 'brightness(100%)'
       }}>
       <div className="w-sectionWidth mx-auto py-4 flex justify-between items-center text-[1.2rem] ">
         <ShowLogo/>
-        <HeaderNavigation/>
+        <Navigation/>
         <BurgerButton/>
       </div>
-      {hasHeaderBackground && <HomeBackground/>}
     </header>
   );
 };

@@ -1,6 +1,6 @@
 import { useAppContext } from '../../../../Context/AppContext';
 
-const BurgerNavigation = () => {
+const Navigation = () => {
     const { isNavActive, setIsNavActive, setIsLogoActive } = useAppContext();
 const navArray = [
     {name: 'About', href: '#about'},
@@ -10,7 +10,7 @@ const navArray = [
     const showNavigation = navArray.map(item => (
         <li 
             key={item.name}
-            className="group relative px-4">
+            className="group relative">
             <a href={item.href}> {item.name} </a>
               <span 
                 className="absolute bottom-0 left-0 h-[2px] w-[0]  bg-background rounded group-hover:w-[50%] duration-300">
@@ -23,20 +23,19 @@ const navArray = [
         setIsLogoActive(false);
     }
 
-    return ( 
+    return (      
         <nav 
             onClick={handleNavClick}
-            className="fixed top-[0] h-screen w-[min(400px,100%)] py-40 bg-secondary z-[10] duration-500"
+            className="fixed top-[0] h-screen w-[min(500px,100%)] py-40 bg-secondary  duration-500 laptop:static laptop:h-[60px] laptop:py-3 laptop:bg-opacity-0 laptop:w-[400px]"
             style={{
                 left: isNavActive ? '0' : '-110%',
-     
             }}
         >
-            <ul className="flex flex-col laptop:flex-row items-center text-[1.5rem] gap-[20px] ">
+            <ul className="flex flex-col laptop:flex-row items-center justify-between text-[1.7rem] text-background gap-[40px] laptop:text-[1.2rem]">
                 {showNavigation}
             </ul>
         </nav>
      );
 };
  
-export default BurgerNavigation;
+export default Navigation;

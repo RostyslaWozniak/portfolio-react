@@ -10,7 +10,7 @@ const Home = () => {
       My Name is Rostik<br/>
       and I'm Web Developer.<br/>
     </h1>
-    <a href="#about" className="fixed bottom-0 left-[10dvw] scale-[.6]  tablet:hidden">
+    <a href="#about" className="fixed bottom-0 tablet:hidden">
       <MainArrow/>
     </a>
   </section>

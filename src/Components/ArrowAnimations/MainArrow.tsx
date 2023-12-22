@@ -6,8 +6,8 @@ const MainArrow = () => {
         <>
             {!hasHeaderBackground
             &&
-            <div>
-                <img src={arrow}/>
+            <div className="w-screen flex justify-center scale-[.7] translate-x-[-5%]">
+                <img className="" src={arrow}/>
             </div>}
         </>
      );
