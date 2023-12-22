@@ -20,6 +20,7 @@ const [isFormHovered, setIsFormHovered] = useState(false);
     <section id="contact"
     className="bg-primary text-font flex flex-col justify-between items-center py-[150px] shadow-primary-shadow "
     style={{
+      cursor: isFormHovered ? 'pointer' : 'default',
       backgroundImage:`url(${pencil}), url(${message}), url(${lines}), url(${mail})`,
       backgroundPosition: `
         top 20% left 20%, 
@@ -32,7 +33,7 @@ const [isFormHovered, setIsFormHovered] = useState(false);
       //   bottom 10% right 10%, 
       //   bottom ${isFormHovered ? '15' : '10'}% left ${isFormHovered ? '5' : '10'}%`,
       backgroundRepeat: 'no-repeat',
-      transition:  'background-position 1s ease'
+      // transition:  'background-position 1s ease'
     }}
     >
         <h1 className="text-[2rem] text-center z-[1]">CONTACT</h1>
