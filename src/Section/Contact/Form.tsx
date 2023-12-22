@@ -22,8 +22,8 @@ const Form = ({ setIsFormHovered } : FormProps) => {
                 <h3 className="text-[1.5rem]">Send Me Message</h3>
             </div>
 
-            <label className="flex flex-col tablet:flex-row gap-[10px] text-center justify-between">
-                Name:
+            <label className="flex flex-col tablet:flex-row gap-[10px] justify-between">
+                <p className="px-4 tablet:px-0">Name:</p>
                 <input 
                     className="w-full tablet:w-[min(400px,100%)] rounded py-1 px-3" 
                     type="text" 
@@ -32,8 +32,8 @@ const Form = ({ setIsFormHovered } : FormProps) => {
                     required
                 /> 
             </label>
-            <label className="flex flex-col tablet:flex-row gap-[10px] text-center justify-between">
-                Email Adress:
+            <label className="flex flex-col tablet:flex-row gap-[10px] justify-between">
+                <p className="px-4 tablet:px-0">Email Adress:</p>
                 <input 
                     className="w-full tablet:w-[min(400px,100%)] rounded py-1 px-3" 
                     type="text" 
@@ -42,8 +42,8 @@ const Form = ({ setIsFormHovered } : FormProps) => {
                     required
                 /> 
             </label>
-            <label className="flex flex-col tablet:flex-row gap-[10px] text-center justify-between">
-                Message:
+            <label className="flex flex-col tablet:flex-row gap-[10px]  justify-between">
+                <p className="px-4 tablet:px-0">Message:</p>
                 <textarea 
                     className="max-h-[200px] min-h-[200px] w-full tablet:w-[min(400px,100%)] rounded py-1 px-3"
                     name="message" 

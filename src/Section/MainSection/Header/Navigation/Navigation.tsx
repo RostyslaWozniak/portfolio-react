@@ -26,7 +26,7 @@ const navArray = [
     return (      
         <nav 
             onClick={handleNavClick}
-            className="fixed top-[0] h-screen w-[min(500px,100%)] py-40 bg-secondary  duration-500 laptop:static laptop:h-[60px] laptop:py-3 laptop:bg-opacity-0 laptop:w-[400px]"
+            className="fixed top-[0] h-screen w-[min(500px,100%)] py-40 bg-secondary  duration-500 laptop:static laptop:h-[50px] laptop:py-3 laptop:bg-opacity-0 laptop:w-[400px]"
             style={{
                 left: isNavActive ? '0' : '-110%',
             }}
