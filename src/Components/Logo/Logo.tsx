@@ -7,6 +7,7 @@ function showLogo(){
   const { isLogoActive, setIsLogoActive, setIsNavActive } = useAppContext();
   useEffect(() => {
     //Logo
+    setIsLogoActive(false);
     if(window.innerWidth < 650) return;
     setTimeout(() => setIsLogoActive(true), 4000);
 

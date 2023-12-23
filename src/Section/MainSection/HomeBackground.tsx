@@ -1,4 +1,4 @@
-import video from '../../asets/video/video.mp4';
+import video from '../../asets/video/video.webm';
 
 const HomeBackground = () => {
     return ( 

@@ -7,7 +7,7 @@ import HomeBackground from './HomeBackground';
 const Main = () => {
 
   return (
-    <div id="main" className="relative h-xl-screen bg-secondary z-[-1]">
+    <div id="main" className="relative h-xl-screen">
       <Loader/>
       <Header/>
       <Home/>

@@ -1,4 +1,4 @@
-import { Dispatch, ReactNode, SetStateAction, createContext, useContext, useState } from 'react';
+import { Dispatch, ReactNode, SetStateAction, createContext, useContext, useEffect, useState } from 'react';
 
 type AppContextProviderProps = {
     children: ReactNode
@@ -26,7 +26,11 @@ export function AppContextProvider({ children } : AppContextProviderProps){
     const [isHeaderActive, setIsHeaderActive] = useState(true);
     const [isNavActive, setIsNavActive] = useState(false);
     const [hasHeaderBackground, setHasHeaderBackground] = useState(false);
-
+    useEffect(() => {
+        scrollTo({
+          top: 0,
+        });
+      }, []);
     const delayLoading = 3000;
 
     return(
