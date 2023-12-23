@@ -3,6 +3,7 @@ import ShowLogo from '../../../Components/Logo/Logo';
 import { useAppContext } from '../../../Context/AppContext';
 import BurgerButton from './Navigation/BurgerButton';
 import Navigation from './Navigation/Navigation';
+import { font } from '../../../utilities/colors';
 
 
 const Header = () => {
@@ -46,7 +47,9 @@ const Header = () => {
       className="fixed w-screen z-[30] duration-200" 
       style={{
         top: isHeaderActive ? '0' : '-100px', 
-        backdropFilter: hasHeaderBackground ? 'brightness(40%)' : 'brightness(100%)'
+        // backdropFilter: hasHeaderBackground ? 'brightness(40%)' : 'brightness(100%)',
+        opacity: hasHeaderBackground ? '.8' : '1',
+        backgroundColor: hasHeaderBackground ? font : 'transparent',
       }}>
       <div className="w-sectionWidth mx-auto py-4 flex justify-between items-center text-[1.2rem] ">
         <ShowLogo/>
