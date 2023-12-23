@@ -15,13 +15,14 @@
     letter-spacing: -.2em;
     animation: 3s infinite alternate animate-stroke;
 }
+
 @keyframes animate-stroke {
     0%{
         fill: transparent; 
         stroke:  var(--primary-color);
         stroke-width: 1;
         stroke-dashoffset: 25%;
-        stroke-dasharray: 0 32%;
+        stroke-dasharray: 0 62%;
     }
     50%{
         fill: transparent; 

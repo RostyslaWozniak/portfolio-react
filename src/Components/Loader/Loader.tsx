@@ -12,7 +12,7 @@ const Loader = () => {
     useEffect(() => {
         setTimeout(() => {
             setIsLoaderVisible(false);
-            document.body.style.overflowY = 'scroll';
+            document.body.style.overflow = 'auto';
         }, delayLoading);
     }, [delayLoading]);
     const time = delayLoading / 1000 - 1;
