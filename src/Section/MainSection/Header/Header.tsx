@@ -10,6 +10,7 @@ const Header = () => {
   const { 
     hasHeaderBackground,
     isHeaderActive, 
+    isNavActive,
     setIsHeaderActive,
     setIsLogoActive,
     setHasHeaderBackground,
@@ -41,17 +42,18 @@ const Header = () => {
     });
 
   }, [setIsHeaderActive, setIsLogoActive, setHasHeaderBackground]);
-
+  //for burger nav 
+  const navOpacity = isNavActive ? 1 : .8;
   return (
     <header 
       className="fixed w-screen z-[30] duration-200" 
       style={{
         top: isHeaderActive ? '0' : '-100px', 
-        // backdropFilter: hasHeaderBackground ? 'brightness(40%)' : 'brightness(100%)',
-        opacity: hasHeaderBackground ? '.8' : '1',
+        opacity: hasHeaderBackground ? navOpacity : '1',
+        
         backgroundColor: hasHeaderBackground ? font : 'transparent',
       }}>
-      <div className="w-sectionWidth mx-auto py-4 flex justify-between items-center text-[1.2rem] ">
+      <div className="w-sectionWidth mx-auto py-4 flex justify-between items-center text-[1.2rem]">
         <ShowLogo/>
         <Navigation/>
         <BurgerButton/>
