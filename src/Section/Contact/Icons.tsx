@@ -8,10 +8,10 @@ import downloadIcon from '../../asets/images/additional-icons/download.svg';
 
 const Icons = () => {
     const contactsArray = [
-        {name: 'Gmail', link: 'rostik19wozniak@gmail.com', icon: gmailIcon, leftPosition: '10px', aditionalIcon: copyIcon},
-        {name: 'GitHub', link: 'https://github.com/RostyslaWozniak', icon: githubIcon, leftPosition: '110px', aditionalIcon: copyIcon},
-        {name: 'Linkedin', link: 'https://www.linkedin.com/in/rostyslav-vozniak-54835429a/', icon: linkedinIcon, leftPosition: '210px', aditionalIcon: copyIcon},
-        {name: 'Download Resume', link: 'rostik19wozniak@gmail.com', icon: resumeIcon, leftPosition: '310px', aditionalIcon: downloadIcon},
+        {name: 'Gmail', link: 'rostik19wozniak@gmail.com', icon: gmailIcon, leftPosition: '0px', aditionalIcon: copyIcon},
+        {name: 'GitHub', link: 'https://github.com/RostyslaWozniak', icon: githubIcon, leftPosition: '100px', aditionalIcon: copyIcon},
+        {name: 'Linkedin', link: 'https://www.linkedin.com/in/rostyslav-vozniak-54835429a/', icon: linkedinIcon, leftPosition: '200px', aditionalIcon: copyIcon},
+        {name: 'Download Resume', link: 'rostik19wozniak@gmail.com', icon: resumeIcon, leftPosition: '300px', aditionalIcon: downloadIcon},
     ];
     
 
