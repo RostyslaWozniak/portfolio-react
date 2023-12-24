@@ -39,7 +39,7 @@ const Form = ({ setIsFormHovered } : FormProps) => {
                     className="w-full tablet:w-[min(400px,100%)] rounded py-1 px-3" 
                     type="text" 
                     name="name" 
-                    placeholder="Enter Your Name" 
+                    placeholder="Enter Your Email" 
                     required
                 /> 
             </label>
