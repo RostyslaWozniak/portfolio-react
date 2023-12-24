@@ -5,10 +5,11 @@ import './Logo.css';
 
 function showLogo(){
   const { isLogoActive, setIsLogoActive, setIsNavActive } = useAppContext();
+  const tabletWidth = 650;
   useEffect(() => {
     //Logo
     setIsLogoActive(false);
-    if(window.innerWidth < 650) return;
+    if(window.innerWidth < tabletWidth) return;
     setTimeout(() => setIsLogoActive(true), 4000);
 
 }, [setIsLogoActive]);
