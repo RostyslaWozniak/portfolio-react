@@ -15,7 +15,7 @@ const HomeBackground = () => {
           >
           <source 
             src={video} 
-            type="video/mp4" 
+            type="video/webm" 
           />
           Your browser does not support the video tag.
         </video>
