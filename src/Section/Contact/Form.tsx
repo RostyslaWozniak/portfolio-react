@@ -13,7 +13,7 @@ const Form = ({ setIsFormHovered } : FormProps) => {
             method="post"
             onMouseOver={() => setIsFormHovered(true)}
             onMouseOut={() => setIsFormHovered(false)}
-            className="relative w-[min(700px,90%)] flex flex-col gap-[20px] p-8 rounded-lg border backdrop-blur-[8px] shadow-sm scale-[.999] hover:shadow-lg hover:scale-[1] duration-200"
+            className="relative w-[min(700px,100%)] flex flex-col gap-[20px] px-4 py-8 tablet:px-8 rounded-lg border backdrop-blur-[8px] shadow-sm scale-[.999] hover:shadow-lg hover:scale-[1] duration-200"
         >           
             <div 
                 style={{
