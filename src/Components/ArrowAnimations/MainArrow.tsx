@@ -5,11 +5,11 @@ const MainArrow = () => {
         <>
             {!hasHeaderBackground
             &&
-            <div id="main-arrow-container" className="border">
+            <a href="#about" id="main-arrow-container" className="border">
                 <div className="first"></div>
                 <div className="second"></div>
                 <div className="third"></div>
-            </div>}
+            </a>}
         </>
      );
 };
