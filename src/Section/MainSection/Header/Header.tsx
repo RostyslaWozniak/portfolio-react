@@ -20,10 +20,12 @@ const Header = () => {
   useEffect(() => {
     let screenArray : number[] = [];
     const tabletWidth = 650;
+    
     window.addEventListener('scroll', () => {
       
       if(window.scrollY < window.innerHeight){
         if(window.innerWidth > tabletWidth) setIsLogoActive(true);
+        
         setIsHeaderActive(true);
         setHasHeaderBackground(false);
       } else{
@@ -35,6 +37,7 @@ const Header = () => {
             setIsHeaderActive(true);
         }
         if(screenArray.length > 30){
+          
           setIsHeaderActive(false);
         }
         setIsLogoActive(false);
@@ -43,6 +46,7 @@ const Header = () => {
 
   }, [setIsHeaderActive, setIsLogoActive, setHasHeaderBackground]);
   //for burger nav 
+
   const navOpacity = isNavActive ? 1 : .8;
   return (
     <header 
@@ -50,7 +54,7 @@ const Header = () => {
       style={{
         top: isHeaderActive ? '0' : '-100px', 
         opacity: hasHeaderBackground ? navOpacity : '1',
-        
+        height: isNavActive ? '100dvh' : '60px',
         backgroundColor: hasHeaderBackground ? font : 'transparent',
       }}>
       <div className="w-sectionWidth mx-auto py-4 flex justify-between items-center text-[1.2rem]">
