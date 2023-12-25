@@ -13,7 +13,7 @@ const navArray = [
             className="group relative">
             <a href={item.href}> {item.name} </a>
               <span 
-                className="absolute bottom-0 left-0 h-[2px] w-[0]  bg-background rounded group-hover:w-[50%] duration-300">
+                className="absolute bottom-0 left-0 h-[2px] w-[0] bg-background rounded group-hover:w-[50%] duration-300">
               </span>
           </li>
     ));
@@ -22,11 +22,10 @@ const navArray = [
         setIsNavActive(false);
         setIsLogoActive(false);
     }
-
     return (      
         <nav 
             onClick={handleNavClick}
-            className="fixed top-[0] h-screen w-[min(500px,100%)] py-40 bg-secondary  duration-500 laptop:static laptop:h-[50px] laptop:py-3 laptop:bg-opacity-0 laptop:w-[400px]"
+            className="fixed top-[0] h-screen w-[min(500px,100%)] py-40 bg-secondary shadow-lg duration-300 laptop:shadow-[none] laptop:static laptop:h-[50px] laptop:py-3 laptop:bg-opacity-0 laptop:w-[400px]"
             style={{
                 left: isNavActive ? '0' : '-110%',
             }}
