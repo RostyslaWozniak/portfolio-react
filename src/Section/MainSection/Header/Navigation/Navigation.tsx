@@ -1,7 +1,7 @@
 import { useAppContext } from '../../../../Context/AppContext';
 
 const Navigation = () => {
-    const { isNavActive, setIsNavActive, setIsLogoActive } = useAppContext();
+    const { isNavActive } = useAppContext();
 const navArray = [
     {name: 'About', href: '#about'},
     {name: 'Projects', href: '#projects'},
@@ -18,13 +18,8 @@ const navArray = [
           </li>
     ));
 
-    function handleNavClick(){
-        setIsNavActive(false);
-        setIsLogoActive(false);
-    }
     return (      
         <nav 
-            onClick={handleNavClick}
             className="fixed top-[0] h-screen w-[min(500px,100%)] py-40 bg-secondary shadow-lg duration-300 laptop:shadow-[none] laptop:static laptop:h-[50px] laptop:py-3 laptop:bg-opacity-0 laptop:w-[400px]"
             style={{
                 left: isNavActive ? '0' : '-110%',

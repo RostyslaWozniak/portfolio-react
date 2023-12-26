@@ -14,6 +14,7 @@ const Header = () => {
     setIsHeaderActive,
     setIsLogoActive,
     setHasHeaderBackground,
+    setIsNavActive,
   } = useAppContext();
   
 
@@ -47,17 +48,25 @@ const Header = () => {
   }, [setIsHeaderActive, setIsLogoActive, setHasHeaderBackground]);
   //for burger nav 
 
-  const navOpacity = isNavActive ? 1 : .8;
+  function handleHeaderClick(){
+    setIsNavActive(false);
+    setIsLogoActive(false);
+  }
+  const navOpacity = isNavActive ? 1 : .7;
+  const headerBackground = isNavActive ? '' : font;
+  const haderPositionWhenNavIsActive = isNavActive ? '0' : '-100px';
   return (
     <header 
+      onClick={handleHeaderClick}
       className="fixed w-screen z-[30] duration-200" 
       style={{
-        top: isHeaderActive ? '0' : '-100px', 
+        top: isHeaderActive ? '0' : haderPositionWhenNavIsActive, 
         opacity: hasHeaderBackground ? navOpacity : '1',
-        height: isNavActive ? '100dvh' : '60px',
-        backgroundColor: hasHeaderBackground ? font : 'transparent',
+        height: isNavActive ? '100dvh' : '80px',
+        backgroundColor: hasHeaderBackground ? headerBackground : 'transparent',
+        backdropFilter:  isNavActive ? 'blur(2px) brightness(70%)' : 'blur(0) brightness(100%)',
       }}>
-      <div className="w-sectionWidth mx-auto py-4 flex justify-between items-center text-[1.2rem]">
+      <div className=" relative w-sectionWidth mx-auto py-4 flex justify-between text-[1.2rem]">
         <ShowLogo/>
         <Navigation/>
         <BurgerButton/>

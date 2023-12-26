@@ -3,7 +3,8 @@ import { useAppContext } from '../../../../Context/AppContext';
 
 const BurgerButton = () => {
     const { isNavActive, setIsLogoActive, setIsNavActive } = useAppContext();
-    function handleBurgerButtonClick(){
+    function handleBurgerButtonClick(e :  React.MouseEvent<HTMLButtonElement, MouseEvent>){
+        e.stopPropagation();
         setIsNavActive(!isNavActive);
         if(isNavActive){
             setIsLogoActive(false);
@@ -13,7 +14,7 @@ const BurgerButton = () => {
     }
     return ( 
         <button
-            className="group absolute top-[50%] right-[20px] w-[40px] h-[30px] translate-y-[-50%] laptop:hidden "
+            className="group absolute top-[50%] right-0 w-[40px] h-[30px] translate-y-[-50%] laptop:hidden "
             onClick={handleBurgerButtonClick}>
             <span 
                 className="absolute w-full top-0 left-0 h-[5px] bg-background rounded duration-300"
