@@ -7,7 +7,7 @@ const Empty = () => {
 
     useEffect(() => {
         window.addEventListener('scroll', () => {
-            window.scrollY > 1200 ? setEmptyBG(`url(${image})`) : setEmptyBG('');
+            window.scrollY > 1100 ? setEmptyBG(`url(${image})`) : setEmptyBG('');
         });        
     }, []);
     return ( 
