@@ -1,4 +1,4 @@
-import { secondary, font, background } from '../../../utilities/colors';
+import { secondary, font, background } from '../../../helpers/variables';
 type ItemLangProps = {
     name: string;
     level: string;

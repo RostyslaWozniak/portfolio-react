@@ -3,7 +3,7 @@ import ShowLogo from '../../../Components/Logo/Logo';
 import { useAppContext } from '../../../Context/AppContext';
 import BurgerButton from './Navigation/BurgerButton';
 import Navigation from './Navigation/Navigation';
-import { font } from '../../../utilities/colors';
+import { font, tabletWidth } from '../../../helpers/variables';
 
 
 const Header = () => {
@@ -20,7 +20,7 @@ const Header = () => {
 
   useEffect(() => {
     let screenArray : number[] = [];
-    const tabletWidth = 650;
+    
     
     window.addEventListener('scroll', () => {
       
