@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Tooltip from '../../Components/Tooltip/Tooltip';
-import cvPdf from '../../asets/files/cv-eng.pdf';
+import cvPdf from '../../asets/files/Rostyslav Vozniak CV_eng.pdf';
 
 type IconElementProps = {
     name: string;
