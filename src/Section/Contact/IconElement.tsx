@@ -32,11 +32,12 @@ const IconElement = ({ name, link, icon, leftPosition, aditionalIcon} : IconElem
     }
     return ( 
         <div 
-            className="absolute h-[70px] grid place-items-center bg-background rounded-lg cursor-pointer shadow-sm hover:brightness-95 hover:shadow-md duration-300"
+            className="absolute h-[70px] grid place-items-center bg-background rounded-lg shadow-sm hover:brightness-95 hover:shadow-md duration-300"
             style={{ 
                 width: isActiveIcon ? '95%' : '70px', 
                 left: isActiveIcon ? '10px' : leftPosition, 
-                scale: isActiveIcon ? '1.1' : '1',
+                boxShadow: isActiveIcon ? '8px 12px 20px -10px #36474a' : '8px 8px 10px -10px #36474a',
+                cursor: isActiveIcon ? 'default' : 'pointer',
                 zIndex: isActiveIcon ? 10 : 1,
             }}
             onClick={e => {
@@ -48,13 +49,23 @@ const IconElement = ({ name, link, icon, leftPosition, aditionalIcon} : IconElem
             <img className="absolute left-[10px]" src={icon}/> 
 
             {/* link or name  */}
-            <p style={{ visibility: isActiveIcon ? 'visible' : 'hidden' }}>{name}</p>
+            {
+                name === 'GitHub' || name === 'Linkedin' 
+                ?
+                (<a style={{ visibility: isActiveIcon ? 'visible' : 'hidden' }} href={link} target="_blank" className="underline">{name}</a>)
+                :
+                (<p style={{ visibility: isActiveIcon ? 'visible' : 'hidden' }}>{name}</p>)
+            }   
+            
 
             {/* on click copy or download  */}
             <a 
                 href={name === 'Download Resume' ? cvPdf : undefined}
                 download={name === 'Download Resume' && cvPdf}
-                style={{ visibility: isActiveIcon ? 'visible' : 'hidden' }} 
+                style={{ 
+                    visibility: isActiveIcon ? 'visible' : 'hidden',
+                    cursor: isActiveIcon ? 'pointer' : 'default',
+                }} 
                 className="absolute right-[10px]" 
                 onMouseOver={() => setIsTooltipVisible(true)}
                 onMouseOut={() => {
