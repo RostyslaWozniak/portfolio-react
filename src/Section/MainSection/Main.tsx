@@ -5,7 +5,7 @@ import HomeBackground from './HomeBackground';
 
 
 const Main = () => {
-
+  
   return (
     <div id="main" className="relative h-xl-screen">
       <Loader/>

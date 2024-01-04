@@ -2,13 +2,14 @@ import { useEffect, useState } from 'react';
 import MainArrow from '../../Components/ArrowAnimations/MainArrow';
 import './css/style.css';
 import TypeWriter from '../../Components/TypeWriter/Typewriter';
+import { tabletWidth } from '../../helpers/variables';
 const Home = () => {
   const [showHeadingDelay, setShowHeadingDelay] = useState(5000);
-  const tabletWidth = 650;
+ 
   useEffect(() => {
     //Logo
     
-    if(window.innerWidth < tabletWidth) setShowHeadingDelay(500);
+    if(window.innerWidth < tabletWidth) setShowHeadingDelay(0);
 }, []);
 
   const speed = 100;
